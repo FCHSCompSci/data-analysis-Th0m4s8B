@@ -18,10 +18,15 @@ with open(filename) as f:
     print(new_trees)
     print(neighborhoods)
 
-    objects = neighborhoods
-    plt.bar((len(objects)), new_trees, align='center', alpha=0.5)
-    plt.xticks(objects)
+    x = []
+    i = 0
+    while i <= 131:
+        x.append(i)
+        i += 1
+
+    plt.bar(neighborhoods, new_trees, align='center', alpha=0.5, color='green')
+    plt.xticks(x, neighborhoods, rotation=270, fontsize=5)
     plt.title("New trees planted", fontsize=24)
-    plt.xlabel(objects, fontsize=16)
-    plt.ylabel("Number of trees", fontsize=16)
+    plt.xlabel('Locations', fontsize=12)
+    plt.ylabel("Number of trees", fontsize=12)
     plt.show()
