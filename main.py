@@ -1,5 +1,4 @@
 import csv
-import matplotlib
 from matplotlib import pyplot as plt
 
 
@@ -7,7 +6,6 @@ filename = 'urban-heat-management-actions-neighborhood-data-1.csv'
 with open(filename) as f:
     reader = csv.reader(f)
     header_row = next(reader)
-    print(header_row)
 
     new_trees = []
     neighborhoods = []
@@ -16,9 +14,6 @@ with open(filename) as f:
         new_trees.append(int(row[3]))
     del new_trees[-1]
     del neighborhoods[-1]
-
-    print(new_trees)
-    print(neighborhoods)
 
     x = []
     i = 0
