@@ -14,6 +14,8 @@ with open(filename) as f:
     for row in reader:
         neighborhoods.append(str(row[0]))
         new_trees.append(int(row[3]))
+    del new_trees[-1]
+    del neighborhoods[-1]
 
     print(new_trees)
     print(neighborhoods)
